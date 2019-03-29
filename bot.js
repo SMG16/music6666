@@ -7,7 +7,7 @@ const ytdl = require('ytdl-core');
 const client = new Client({ disableEveryone: true});
 
 const youtube = new YouTube(config.GOOGLE_API_KEY);
-const PREFIX = "1";
+const PREFIX = "6";
 
 const queue = new Map();
 
@@ -315,18 +315,18 @@ Playing: ${serverQueue.songs[0].title}`)
     else if(msg.content.startsWith(`${PREFIX}help`)){
         var embedhelp = new Discord.RichEmbed()
             .setTitle(`marcos-MusicBot Commands`)
-            .addField("play [YouTube Link/Playlist]", "Usage: `1play` Description: To play See The YouTube Linke And playlist.", false)
-            .addField("play [Suchbegriff(e)]", "Usage: `1play`<song name> Description: To play Music.", false)
-            .addField("skip", "Usage: `1skip` Description: To skip music.", false)
-            .addField("stop", "Usage: `1stop` Description: To Bot disconnected.", false)
-            .addField("song", "Usage: `1song` Description: To Check The Current playing song.", false)
-            .addField("queue", "Usage: `1queue` Description: To Check The Queue List.", false)
-            .addField("volume", "Usage: `1volume` Description: To See Volume.", false)
-            .addField("volume [Wert]", "Usage: `1volume` Description: To Changes the volume level to the specified value.", false)
-            .addField("pause", "Usage: `1pause` Description: To pause The Current Playing Song.", false)
-            .addField("resume", "Usage: `1resume` Description: To Resume The Paused Song.", false)
-            .addField("mute", "Usage: `1mute` Description: To mute Bot.", false)
-            .addField("unmute", "Usage: `1unmute` Description: To unmute Bot.", false)
+            .addField("play [YouTube Link/Playlist]", "Usage: `6play` Description: To play See The YouTube Linke And playlist.", false)
+            .addField("play [Suchbegriff(e)]", "Usage: `6play`<song name> Description: To play Music.", false)
+            .addField("skip", "Usage: `6skip` Description: To skip music.", false)
+            .addField("stop", "Usage: `6stop` Description: To Bot disconnected.", false)
+            .addField("song", "Usage: `6song` Description: To Check The Current playing song.", false)
+            .addField("queue", "Usage: `6queue` Description: To Check The Queue List.", false)
+            .addField("volume", "Usage: `6volume` Description: To See Volume.", false)
+            .addField("volume [Wert]", "Usage: `6volume` Description: To Changes the volume level to the specified value.", false)
+            .addField("pause", "Usage: `6pause` Description: To pause The Current Playing Song.", false)
+            .addField("resume", "Usage: `6resume` Description: To Resume The Paused Song.", false)
+            .addField("mute", "Usage: `6mute` Description: To mute Bot.", false)
+            .addField("unmute", "Usage: `6unmute` Description: To unmute Bot.", false)
             .setColor(['#f9fcfc'])
             .setThumbnail(client.user.avatarURL)
             return msg.channel.sendEmbed(embedhelp);
@@ -422,7 +422,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : CF Na World Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`1help`,"http://twitch.tv/Toxic Codes")
+client.user.setGame(`6help`,"http://twitch.tv/Toxic Codes")
 client.user.setStatus("dnd")
 });
 
